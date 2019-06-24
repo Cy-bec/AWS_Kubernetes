@@ -364,7 +364,7 @@ docker push aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository
 
 ## Deployments, Services and Pods
 
-### Sources-for-learning
+### References
 
 <https://www.bogotobogo.com/DevOps/Docker/Docker_Kubernetes_NodePort_vs_LoadBalancer_vs_Ingress.php>
 
