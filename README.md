@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Install necessary tools and establish connection](#install-necessary-tools-and-establish-connection)
-- [Create Your Amazon EKS Cluster and Worker Nodes](#create-your-amazon-eks-cluster-and-worker-nodes)
+- [Create your Amazon EKS Cluster and Worker Nodes](#create-your-amazon-eks-cluster-and-worker-nodes)
 - [Test if your cluster is working](#test-if-your-cluster-is-working)
   - [One-liner-cluster-test](#one-liner-cluster-test)
   - [Step by Step-cluster-test](#step-by-step-cluster-test)
@@ -11,12 +11,12 @@
 - [Deploy the Kubernetes Web UI (Dashboard)](#deploy-the-kubernetes-web-ui-dashboard)
   - [One-liner-dashboard](#one-liner-dashboard)
   - [Step by Step-dashboard](#step-by-step-dashboard)
-- [Using helm with Amazon EKS](#using-helm-with-amazon-eks)
+- [Using Helm with Amazon EKS](#using-helm-with-amazon-eks)
   - [Sources](#sources)
   - [Installation](#installation)
     - [Linux](#linux)
     - [Mac](#mac)
-    - [helm plugin for local tiller](#helm-plugin-for-local-tiller)
+    - [Helm plugin for local tiller](#Helm-plugin-for-local-tiller)
 - [Kubernetes Metrics Server](#kubernetes-metrics-server)
   - [Install metrics-server](#install-metrics-server)
   - [Control Plane Metrics with Prometheus](#control-plane-metrics-with-prometheus)
@@ -53,7 +53,7 @@
       3. Move the binary in to your PATH: `sudo mv ./kubectl /usr/local/bin/kubectl`
       4. `kubectl version`
 
-## Create Your Amazon EKS Cluster and Worker Nodes
+## Create your Amazon EKS Cluster and Worker Nodes
 
 ([git-docs](https://eksctl.io/))
 
@@ -172,7 +172,7 @@ kubectl proxy
 
 <https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html>
 
-## Using helm with Amazon EKS
+## Using Helm with Amazon EKS
 
 Use helm and Tiller only on local machine!
 
@@ -196,7 +196,7 @@ sudo snap install helm --classic
 brew install kubernetes-helm
 ```
 
-#### helm plugin for local tiller
+#### Helm plugin for local tiller
 
 Install:
 
