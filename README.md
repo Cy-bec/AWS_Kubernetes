@@ -71,14 +71,14 @@ eksctl create cluster \
 
  | | |
 | --- | --- | --- |
---name string                    | EKS cluster name (generated if unspecified, e.g. "unique-creature-1561094398")
---version string                 | Kubernetes version (valid options: 1.10, 1.11, 1.12) (default "1.12")
---nodegroup-name string          | name of the nodegroup (generated if unspecified, e.g. "ng-80a14634")
---node-type string               | node instance type (default "m5.large")
---nodes int                      | total number of nodes (for a static ASG) (default 2)
---nodes-min int                  | minimum nodes in ASG (default 2)
---nodes-max int                  | maximum nodes in ASG (default 2)
---node-ami string                | Advanced use cases only. If 'static' is supplied (default) then eksctl will use static AMIs; if 'auto' is supplied then eksctl will automatically set the AMI based on version/region/instance type; if any other value is supplied it will override the AMI to use for the nodes. Use with extreme care. (default "static") ([Amazon-docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html))
+ --name string                    | EKS cluster name (generated if unspecified, e.g. "unique-creature-1561094398")
+ --version string                 | Kubernetes version (valid options: 1.10, 1.11, 1.12) (default "1.12")
+ --nodegroup-name string          | name of the nodegroup (generated if unspecified, e.g. "ng-80a14634")
+ --node-type string               | node instance type (default "m5.large")
+ --nodes int                      | total number of nodes (for a static ASG) (default 2)
+ --nodes-min int                  | minimum nodes in ASG (default 2)
+ --nodes-max int                  | maximum nodes in ASG (default 2)
+ --node-ami string                | Advanced use cases only. If 'static' is supplied (default) then eksctl will use static AMIs; if 'auto' is supplied then eksctl will automatically set the AMI based on version/region/instance type; if any other value is supplied it will override the AMI to use for the nodes. Use with extreme care. (default "static") ([Amazon-docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html))
 
 Testing:
 
