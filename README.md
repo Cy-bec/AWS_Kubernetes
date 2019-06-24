@@ -69,8 +69,8 @@ eksctl create cluster \
 --node-ami auto
 ```
 
- | | |
-| --- | --- | --- |
+ s| s|
+| --- | --- |
  --name string                    | EKS cluster name (generated if unspecified, e.g. "unique-creature-1561094398")
  --version string                 | Kubernetes version (valid options: 1.10, 1.11, 1.12) (default "1.12")
  --nodegroup-name string          | name of the nodegroup (generated if unspecified, e.g. "ng-80a14634")
