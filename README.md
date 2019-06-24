@@ -174,7 +174,7 @@ kubectl proxy
 
 ## Using Helm with Amazon EKS
 
-Use helm and Tiller only on local machine!
+Use helm and tiller only on local machine!
 
 ### Sources
 
