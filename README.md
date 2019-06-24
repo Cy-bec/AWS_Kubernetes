@@ -1,4 +1,4 @@
-# Creating new cluster, configure structures, install tools and deploy own projects
+# Creating new clusters, configure structures, install tools and deploy own projects
 
 ## Table of Contents
 
