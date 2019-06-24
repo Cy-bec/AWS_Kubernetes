@@ -312,7 +312,7 @@ Create repository. (replace <span style="color:red">*hello-repository*</span> an
 aws ecr create-repository --repository-name hello-repository --region region
 ```
 
-|| |
+|flag| description |
 |--- | ---|
 |--repository-name (string) | The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app ) or  it  can  be  prepended with  a  namespace  to group the repository into a category (such as project-a/nginx-web-app )|
 |--region | the region where it will be created.  e.g. Tokyo is `ap-northeast-1`. [get region here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)|
