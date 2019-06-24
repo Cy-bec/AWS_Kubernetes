@@ -383,7 +383,7 @@ docker push aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository
 ### Deployment
 
 A deployment is basically the receipt and the manager for the pods.
-It will create the connections, replica sets, the ports, the amaount of pods, etc. ...
+It will create the connections, replica sets, the ports, the amount of pods, etc. ...
 
 Example (will create 5 pods from my docker-image on ecr):
 
