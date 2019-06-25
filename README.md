@@ -37,12 +37,12 @@
       1. If you are unable to install version 1.16.156 or greater of the AWS CLI on your system, you must ensure that the AWS IAM Authenticator for Kubernetes is installed on your system. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
    3. Configure Your AWS CLI Credentials in your environment
       1. `aws configure`
-         1. AWS Access Key ID [None]: <span style="color:red">*Put your account key ID here*</span>
-         2. AWS Secret Access Key [None]: <span style="color:red">*Put your secret access key here*</span>
-         3. Default region name [None]: <span style="color:red">*Put the region where you want to deploy it here*</span>
+         1. AWS Access Key ID [None]: *__Put your account key ID here__*
+         2. AWS Secret Access Key [None]: *__Put your secret access key here__*
+         3. Default region name [None]: *__Put the region where you want to deploy it here__*
             1. [get region here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
             2. e.g. Tokyo is `ap-northeast-1`
-         4. Default output format [None]: <span style="color:red">*json*</span>
+         4. Default output format [None]: *__json__*
    4. Install the `eksctl` command line utility
       1. `curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp`
       2. `sudo mv /tmp/eksctl /usr/local/bin`
@@ -69,7 +69,7 @@ eksctl create cluster \
 --node-ami auto
 ```
 
- flag | describtion|
+ flag | description|
   --- | --- |
  --name string                    | EKS cluster name (generated if unspecified, e.g. "unique-creature-1561094398")
  --version string                 | Kubernetes version (valid options: 1.10, 1.11, 1.12) (default "1.12")
@@ -134,7 +134,7 @@ kubectl delete rc/redis-master rc/redis-slave rc/guestbook svc/redis-master svc/
 
 ## Deploy the Kubernetes Web UI (Dashboard)
 
-([Amazone-guid](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html))
+([Amazon-guid](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html))
 
 ### One-liner-dashboard
 
@@ -204,7 +204,7 @@ Install:
 helm plugin install https://github.com/rimusz/helm-tiller
 ```
 
-Start local Tiller with the plugin (change <span style="color:red">*local-tiller-namespace*</span> as you want):
+Start local Tiller with the plugin (change *__local-tiller-namespace__* as you want):
 
 ```Console
 helm tiller start local-tiller-namespace
@@ -222,7 +222,7 @@ Stop local Tiller with the plugin:
 helm tiller stop
 ```
 
-Usage to use helm with plugin (replace <span style="color:red">*HELM_COMMANDS*</span>):
+Usage to use helm with plugin (replace *__HELM_COMMANDS__*):
 
 ```Console
 helm tiller run my-tiller-namespace -- HELM_COMMANDS
@@ -273,7 +273,7 @@ kubectl get deployment metrics-server -n kube-system
 
 ### Control Plane Metrics with Prometheus
 
- <span style="color:red">!!!Start helm with tiller plugin!!!</span>
+ *__!!!Start helm with tiller plugin!!!__*
 
  Install Prometheus with helm plugin:
 
@@ -306,7 +306,7 @@ Open Prometheus console in default browser: [localhost:9090](http://localhost:90
 
 [Amazon-guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#use-ecr)
 
-Create repository. (replace <span style="color:red">*hello-repository*</span> and <span style="color:red">*region*</span>)
+Create repository. (replace *__hello-repository__* and *__region__*)
 
 ```Console
 aws ecr create-repository --repository-name hello-repository --region region
@@ -335,9 +335,9 @@ Tag docker-image with with the repositoryUri value:
 
 Example:
 
-docker-image = <span style="color:red">*hello-world*</span>
+docker-image = *__hello-world__*
 
-repositoryUri = <span style="color:red">*aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository*</span>
+repositoryUri = *__aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository__*
 
 ```Console
 docker tag hello-world aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository
@@ -345,7 +345,7 @@ docker tag hello-world aws_account_id.dkr.ecr.region.amazonaws.com/hello-reposit
 
 Run the aws ecr get-login --no-include-email command to get the docker login authentication command string for your registry
 
-Change <span style="color:red">*region*</span> to the region of the docker-repository
+Change *__region__* to the region of the docker-repository
 
 ```Console
 aws ecr get-login --no-include-email --region region
@@ -356,7 +356,7 @@ Run the docker login command that was returned in the previous step. This comman
 Push the image to Amazon ECR with the repositoryUri value from the earlier step
 
 Example:
-Change <span style="color:red">*aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository*</span> to your docker-repository
+Change *__aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository__* to your docker-repository
 
 ```Console
 docker push aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository
@@ -431,7 +431,7 @@ spec:
             periodSeconds: 3
 ```
 
-Create service to access from other pods (to make it accessable from outer-worl add `type: LoadBalancer` in spec: -> ports: ):
+Create service to access from other pods (to make it accessible from outer-world add `type: LoadBalancer` in spec: -> ports: ):
 
 ```yaml
 apiVersion: v1
