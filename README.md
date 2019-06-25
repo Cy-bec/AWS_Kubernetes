@@ -94,6 +94,7 @@ kubernetes   ClusterIP   10.100.0.1      <none>        443/TCP    21h
 ## Test if your cluster is working
 
 ([Amazon-guide](https://docs.aws.amazon.com/eks/latest/userguide/eks-guestbook.html))
+<a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-guestbook.html" target="_blank">Amazon-guide!</a>
 
 ### One-liner-cluster-test
 
