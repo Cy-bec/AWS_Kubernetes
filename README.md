@@ -22,7 +22,7 @@
   - [Control Plane Metrics with Prometheus](#control-plane-metrics-with-prometheus)
 - [Deploy own Docker](#deploy-own-docker)
   - [Create Repository in AWS/ECR](#Create-Repository-in-AWS/ECR)
-- [Deployments Services and Pods](#Deployments-Services-and-Pods)
+- [Deployments Services and Pods incomplete](#Deployments-Services-and-Pods-incomplete)
   - [Sources-for-learning](#Sources-for-learning)
   - [Deployment](#Deployment)
 
@@ -362,7 +362,7 @@ Change *__aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository__* to you
 docker push aws_account_id.dkr.ecr.region.amazonaws.com/hello-repository
 ```
 
-## Deployments, Services and Pods
+## Deployments, Services and Pods (incomplete)
 
 ### References
 
