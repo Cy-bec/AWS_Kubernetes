@@ -21,7 +21,7 @@
   - [Install metrics-server](#install-metrics-server)
   - [Control Plane Metrics with Prometheus](#control-plane-metrics-with-prometheus)
 - [Deploy own Docker](#deploy-own-docker)
-  - [Create Repository in AWS/ECR](#Create-Repository-in-AWS/ECR)
+  - [Create Repository in AWS-ECR](#Create-Repository-in-AWS-ECR)
 - [Deployments Services and Pods (incomplete)](#Deployments-Services-and-Pods-incomplete)
   - [References](#References)
   - [Deployment](#Deployment)
@@ -302,7 +302,7 @@ Open Prometheus console in default browser: [localhost:9090](http://localhost:90
 
 ## Deploy own Docker
 
-### Create Repository in AWS/ECR
+### Create Repository in AWS-ECR
 
 [Amazon-guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#use-ecr)
 
