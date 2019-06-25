@@ -22,8 +22,8 @@
   - [Control Plane Metrics with Prometheus](#control-plane-metrics-with-prometheus)
 - [Deploy own Docker](#deploy-own-docker)
   - [Create Repository in AWS/ECR](#Create-Repository-in-AWS/ECR)
-- [Deployments Services and Pods incomplete](#Deployments-Services-and-Pods-incomplete)
-  - [Sources-for-learning](#Sources-for-learning)
+- [Deployments Services and Pods (incomplete)](#Deployments-Services-and-Pods-incomplete)
+  - [References](#References)
   - [Deployment](#Deployment)
 
 ## Install necessary tools and establish connection
