@@ -431,15 +431,15 @@ spec:
             periodSeconds: 3
 ```
 
-Create service to access from other pods (to make it accessible from outer-world add `type: LoadBalancer` in spec: -> ports: ):
+Create service to access from other pods (to make it accessible from outer-world add `type: LoadBalancer` in spec: ):
 
 ```yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: service-frontend
   labels:
-    run: frontend
+    run: service-frontend
 spec:
   selector:
     app: hello
@@ -455,7 +455,7 @@ Create ssh pod to test the connection:
 ```Console
 kubectl apply -f https://k8s.io/examples/application/shell-demo.yaml
 
-kubectl get pod shell-demo
+kubectl get pod shell-demo --watch
 
 kubectl exec -it shell-demo -- /bin/bash
 ```
@@ -465,9 +465,9 @@ in the shell:
 ```Console
 apt update
 
-apt install curl
+apt install curl --yes
 
 printenv | grep SERVICE
 
-curl -v host_adresss:and_hostPort
+curl -v $host_adresss:$and_hostPort
 ```
