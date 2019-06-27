@@ -74,7 +74,7 @@ eksctl create cluster \
  --name string                    | EKS cluster name (generated if unspecified, e.g. "unique-creature-1561094398")
  --version string                 | Kubernetes version (valid options: 1.10, 1.11, 1.12) (default "1.12")
  --nodegroup-name string          | name of the nodegroup (generated if unspecified, e.g. "ng-80a14634")
- --node-type string               | node instance type (default "m5.large")
+ --node-type string               | node instance type (default "m5.large") [Amazon-docs](https://aws.amazon.com/ec2/pricing/on-demand/)
  --nodes int                      | total number of nodes (for a static ASG) (default 2) [Amazon-docs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html)
  --nodes-min int                  | minimum nodes in ASG (default 2)
  --nodes-max int                  | maximum nodes in ASG (default 2)
