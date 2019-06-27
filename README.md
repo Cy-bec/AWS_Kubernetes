@@ -25,6 +25,7 @@
 - [Deployments Services and Pods (incomplete)](#Deployments-Services-and-Pods-incomplete)
   - [References](#References)
   - [Deployment](#Deployment)
+- [Cleaning Up your Amazon ECS Resources](#Cleaning-Up-your-Amazon-ECS-Resources)
 
 ## Install necessary tools and establish connection
 
@@ -47,7 +48,7 @@
       1. `curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp`
       2. `sudo mv /tmp/eksctl /usr/local/bin`
       3. `eksctl version`
-   5. Install and Configure kubectl for Amazon EKS ([kubernetes-docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/))
+   5. Install and Configure kubectl for Amazon EKS (only Linux. See [kubernetes-docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for more)
       1. latest: `curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
       2. Make the kubectl binary executable: `chmod +x ./kubectl`
       3. Move the binary in to your PATH: `sudo mv ./kubectl /usr/local/bin/kubectl`
@@ -471,3 +472,7 @@ printenv | grep SERVICE
 
 curl -v $host_adresss:$and_hostPort
 ```
+
+## Cleaning Up your Amazon ECS Resources
+
+([Amazon-guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CleaningUp.html))
