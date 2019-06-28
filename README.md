@@ -35,8 +35,8 @@
 2. Create the required client security token for cluster API server communication:
    1. ```pip3 install awscli --upgrade --user```
    2. ```aws --version```
-      1. If you are unable to install version 1.16.156 or greater of the AWS CLI on your system, you must ensure that the AWS IAM Authenticator for Kubernetes is installed on your system. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
-   3. Configure Your AWS CLI Credentials in your environment
+   3. If you are unable to install version 1.16.156 or greater of the AWS CLI on your system, you must ensure that the AWS IAM Authenticator for Kubernetes is installed on your system. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
+   4. Configure Your AWS CLI Credentials in your environment
       1. `aws configure`
          1. AWS Access Key ID [None]: *__Put your account key ID here__*
          2. AWS Secret Access Key [None]: *__Put your secret access key here__*
@@ -44,11 +44,11 @@
             1. [get region here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
             2. e.g. Tokyo is `ap-northeast-1`
          4. Default output format [None]: *__json__*
-   4. Install the `eksctl` command line utility
+   5. Install the `eksctl` command line utility
       1. `curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp`
       2. `sudo mv /tmp/eksctl /usr/local/bin`
       3. `eksctl version`
-   5. Install and Configure kubectl for Amazon EKS (only Linux. See [kubernetes-docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for more)
+   6. Install and Configure kubectl for Amazon EKS (only Linux. See [kubernetes-docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for more)
       1. latest: `curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
       2. Make the kubectl binary executable: `chmod +x ./kubectl`
       3. Move the binary in to your PATH: `sudo mv ./kubectl /usr/local/bin/kubectl`
@@ -80,6 +80,12 @@ eksctl create cluster \
  --nodes-min int                  | minimum nodes in ASG (default 2)
  --nodes-max int                  | maximum nodes in ASG (default 2)
  --node-ami string                | Advanced use cases only. If 'static' is supplied (default) then eksctl will use static AMIs; if 'auto' is supplied then eksctl will automatically set the AMI based on version/region/instance type; if any other value is supplied it will override the AMI to use for the nodes. Use with extreme care. (default "static") ([Amazon-docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html))
+
+If the following Error appears follow [this](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) instructions to install it:
+
+```Console
+neither aws-iam-authenticator nor heptio-authenticator-aws are installed
+```
 
 Testing:
 
