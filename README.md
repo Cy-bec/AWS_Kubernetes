@@ -242,7 +242,51 @@ brew install kubernetes-helm
 
 Install:
 
-Use this: [github](https://github.com/rimusz/helm-tiller)
+```Console
+helm init --client-only
+```
+
+```Console
+helm plugin install https://github.com/rimusz/helm-tiller
+```
+
+Start local Tiller with the plugin (change *__local-tiller-namespace__* as you want):
+
+```Console
+helm tiller start local-tiller-namespace
+```
+
+Install test Chart:
+
+```Console
+helm tiller run my-tiller-namespace -- helm repo update
+helm tiller run my-tiller-namespace -- helm install stable/mysql
+```
+
+Confirm if deployed:
+
+```Console
+kubectl get deployments
+```
+
+Stop local Tiller with the plugin:
+
+```Console
+helm tiller stop
+```
+
+Usage to use helm with plugin (replace *__HELM_COMMANDS__*):
+
+```Console
+helm tiller run my-tiller-namespace -- HELM_COMMANDS
+```
+
+Example:
+
+```Console
+helm tiller run my-tiller-namespace -- helm list
+helm tiller run my-tiller-namespace -- bash -c 'echo running helm; helm list'
+```
 
 ## Kubernetes Metrics Server
 
