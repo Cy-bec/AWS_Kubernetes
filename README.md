@@ -243,7 +243,7 @@ brew install kubernetes-helm
 Install:
 
 ```Console
-helm init
+helm init --client-only
 ```
 
 ```Console
