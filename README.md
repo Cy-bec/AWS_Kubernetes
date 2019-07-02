@@ -152,7 +152,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/
 Create a file called eks-admin-service-account.yaml with the text below. This manifest defines a service account and cluster role binding called eks-admin.
 
 ```Console
-echo $'apiVersion: v1\nkind: ServiceAccount\nmetadata:\n  name: eks-admin\n  namespace: kube-system\n---\napiVersion: rbac.authorization.k8s.io/v1beta1\nkind: ClusterRoleBinding\nmetadata:\n  name: eks-admin\nroleRef:\n  apiGroup: rbac.authorization.k8s.io\n  kind: ClusterRole\n  name: cluster-admin\nsubjects:\n- kind: ServiceAccount\n  name: eks-admin\n  namespace: kube-system' > eks-admin-service-account.yaml.yaml
+echo $'apiVersion: v1\nkind: ServiceAccount\nmetadata:\n  name: eks-admin\n  namespace: kube-system\n---\napiVersion: rbac.authorization.k8s.io/v1beta1\nkind: ClusterRoleBinding\nmetadata:\n  name: eks-admin\nroleRef:\n  apiGroup: rbac.authorization.k8s.io\n  kind: ClusterRole\n  name: cluster-admin\nsubjects:\n- kind: ServiceAccount\n  name: eks-admin\n  namespace: kube-system' > eks-admin-service-account.yaml
 ```
 
 Apply the service account and cluster role binding to your cluster:
