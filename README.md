@@ -250,10 +250,10 @@ helm init --client-only
 helm plugin install https://github.com/rimusz/helm-tiller
 ```
 
-Start local Tiller with the plugin (change *__local-tiller-namespace__* as you want):
+Start local Tiller with the plugin (change *__my-tiller-namespace__* as you want):
 
 ```Console
-helm tiller start local-tiller-namespace
+helm tiller start my-tiller-namespace
 ```
 
 Install test Chart:
