@@ -259,7 +259,7 @@ helm tiller start local-tiller-namespace
 Check release status:
 
 ```Console
-helm status local-tiller-namespace
+helm tiller run my-tiller-namespace -- helm status local-tiller-namespace
 ```
 
 Stop local Tiller with the plugin:
