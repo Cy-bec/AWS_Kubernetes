@@ -243,6 +243,10 @@ brew install kubernetes-helm
 Install:
 
 ```Console
+helm init
+```
+
+```Console
 helm plugin install https://github.com/rimusz/helm-tiller
 ```
 
