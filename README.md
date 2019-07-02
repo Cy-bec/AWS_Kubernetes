@@ -85,7 +85,9 @@ data:
         - system:masters
 ```
 
+get `rolearn` from aws-console -> EKS -> cluster.
 
+get `userarn` on the other machine with `aws sts get-caller-identity`.
 
 ## Create your Amazon EKS Cluster and Worker Nodes
 
