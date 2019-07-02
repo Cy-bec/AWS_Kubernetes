@@ -63,6 +63,30 @@
 
 To login to an existing cluster, a User with access rights have to enable your user credentials or role in the cluster!
 
+Give Root to one User (from [Amazon-guide](https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/)):
+
+```Yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+data:
+  mapRoles: |
+    - rolearn: arn:aws:iam::11122223333:role/EKS-Worker-NodeInstanceRole-1I00GBC9U4U7B
+      username: system:node:{{EC2PrivateDNSName}}
+      groups:
+        - system:bootstrappers
+        - system:nodes
+  mapUsers: |
+    - userarn: arn:aws:iam::11122223333:user/designated_user
+      username: designated_user
+      groups:
+        - system:masters
+```
+
+
+
 ## Create your Amazon EKS Cluster and Worker Nodes
 
 ([git-docs](https://eksctl.io/))
