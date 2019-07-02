@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Install necessary tools and establish connection](#install-necessary-tools-and-establish-connection)
+- [Login to existing EKS-Cluster](#Login-to-existing-EKS-Cluster)
 - [Create your Amazon EKS Cluster and Worker Nodes](#create-your-amazon-eks-cluster-and-worker-nodes)
 - [Test if your cluster is working](#test-if-your-cluster-is-working)
   - [One-liner-cluster-test](#one-liner-cluster-test)
@@ -53,6 +54,14 @@
       2. Make the kubectl binary executable: `chmod +x ./kubectl`
       3. Move the binary in to your PATH: `sudo mv ./kubectl /usr/local/bin/kubectl`
       4. `kubectl version`
+
+## Login to existing EKS-Cluster
+
+[K8s-guide](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+
+[Amazon](https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/)
+
+To login to an existing cluster, a User with access rights have to enable your user credentials or role in the cluster!
 
 ## Create your Amazon EKS Cluster and Worker Nodes
 
