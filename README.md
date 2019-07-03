@@ -5,6 +5,7 @@
 - [Install necessary tools and establish connection](#install-necessary-tools-and-establish-connection)
 - [Login to existing EKS-Cluster](#Login-to-existing-EKS-Cluster)
 - [Create your Amazon EKS Cluster and Worker Nodes](#create-your-amazon-eks-cluster-and-worker-nodes)
+- [Delete EKS Cluster](#Delete-EKS-Cluster)
 - [Test if your cluster is working](#test-if-your-cluster-is-working)
   - [One-liner-cluster-test](#one-liner-cluster-test)
   - [Step by Step-cluster-test](#step-by-step-cluster-test)
@@ -132,6 +133,10 @@ Example output:
 NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 kubernetes   ClusterIP   10.100.0.1      <none>        443/TCP    21h
 ```
+
+## Delete EKS Cluster
+
+[Amazon-guide](https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html)
 
 ## Test if your cluster is working
 
