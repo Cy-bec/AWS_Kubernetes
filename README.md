@@ -51,7 +51,8 @@
       2. `sudo mv /tmp/eksctl /usr/local/bin`
       3. `eksctl version`
    6. Install and Configure kubectl for Amazon EKS (only Linux. See [kubernetes-docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for more)
-      1. latest: `curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
+      1. latest:
+         1. `curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl`
       2. Make the kubectl binary executable: `chmod +x ./kubectl`
       3. Move the binary in to your PATH: `sudo mv ./kubectl /usr/local/bin/kubectl`
       4. `kubectl version`
@@ -125,7 +126,7 @@ neither aws-iam-authenticator nor heptio-authenticator-aws are installed
 
 Testing:
 
-$ `kubectl get svc`
+`kubectl get svc`
 
 Example output:
 
