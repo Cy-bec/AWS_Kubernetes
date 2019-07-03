@@ -332,6 +332,14 @@ Verify that the metrics-server deployment is running the desired number of pods 
 kubectl get deployment metrics-server -n kube-system
 ```
 
+#### Remove Metrics-server
+
+Change $DOWNLOAD_VERSION with the downloaded Folder version if not available in the environment anymore.
+
+```Console
+kubectl delete -f metrics-server-$DOWNLOAD_VERSION/deploy/1.8+/
+```
+
 ### Control Plane Metrics with Prometheus
 
  *__!!!Start helm with tiller plugin!!!__*
@@ -360,6 +368,12 @@ kubectl --namespace=prometheus port-forward deploy/prometheus-server 9090
 ```
 
 Open Prometheus console in default browser: [localhost:9090](http://localhost:9090)
+
+#### Remove Prometheus
+
+```Console
+helm tiller run my-tiller-namespace -- helm delete prometheus && kubectl delete namespace prometheus
+```
 
 ## Deploy own Docker
 
