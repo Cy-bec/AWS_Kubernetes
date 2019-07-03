@@ -4,6 +4,7 @@
 
 - [Install necessary tools and establish connection](#install-necessary-tools-and-establish-connection)
 - [Login to existing EKS-Cluster](#Login-to-existing-EKS-Cluster)
+  - [Adding User to Cluster](#Adding-User-to-Cluster)
 - [Create your Amazon EKS Cluster and Worker Nodes](#create-your-amazon-eks-cluster-and-worker-nodes)
 - [Delete EKS Cluster](#Delete-EKS-Cluster)
 - [Test if your cluster is working](#test-if-your-cluster-is-working)
@@ -66,6 +67,8 @@
 [Amazon](https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/)
 
 To login to an existing cluster, a User with access rights have to enable your user credentials or role in the cluster!
+
+### Adding User to Cluster
 
 Give Root to one User (from [Amazon-guide](https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/)):
 
