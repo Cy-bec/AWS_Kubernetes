@@ -91,6 +91,8 @@ get `rolearn` from aws-console -> EKS -> cluster.
 
 get `userarn` on the other machine with `aws sts get-caller-identity`.
 
+`designated_user` is the username of the account you want to add.
+
 ## Create your Amazon EKS Cluster and Worker Nodes
 
 ([git-docs](https://eksctl.io/))
