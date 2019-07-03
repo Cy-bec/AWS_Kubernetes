@@ -552,3 +552,9 @@ curl -v $host_adresss:$and_hostPort
 ## Cleaning Up your Amazon ECS Resources
 
 ([Amazon-guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CleaningUp.html))
+
+## Useful Alias'
+
+```Console
+alias print_kubectl_res='echo $'\''kubectl get namespaces -A:\n'\'' && kubectl get namespaces -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get replicationcontroller -A:\n'\'' && kubectl get replicationcontroller -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get deployments -A:\n'\'' && kubectl get deployments -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get pods -o wide -A:\n'\'' && kubectl get pods -o wide -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get rc,services -A:\n'\'' && kubectl get rc,services -A'
+```
