@@ -31,6 +31,8 @@
   - [References](#References)
   - [Deployment](#Deployment)
 - [Cleaning Up your Amazon ECS Resources](#Cleaning-Up-your-Amazon-ECS-Resources)
+- [Linux only Log](#Linux-only-Log)
+- [Create new Node](#Create-new-Node)
 
 ## Install necessary tools and establish connection
 
@@ -561,3 +563,13 @@ curl -v $host_adresss:$and_hostPort
 ```Console
 alias print_kubectl_res='echo $'\''kubectl get namespaces -A:\n'\'' && kubectl get namespaces -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get replicationcontroller -A:\n'\'' && kubectl get replicationcontroller -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get deployments -A:\n'\'' && kubectl get deployments -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get pods -o wide -A:\n'\'' && kubectl get pods -o wide -A && echo $'\''\n\n\n\n'\'' && echo $'\''kubectl get rc,services -A:\n'\'' && kubectl get rc,services -A'
 ```
+
+## Linux only Log
+
+```Console
+journalctl -f -u kubelet
+```
+
+## Create new Node
+
+[Amazon-guide](https://docs.aws.amazon.com/eks/latest/userguide/migrate-stack.html)
